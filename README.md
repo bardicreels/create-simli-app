@@ -14,8 +14,16 @@ GROQ_API_KEY="API key from groq.com"
 
 If you want to try Simli but don't have API access to these third parties, ask in Discord and we can help you out with that ([Discord Link](discord.com)). 
 
-To run the back-end and front-end together, run the following command:
 
+First make sure you have nodejs installed
+
+```bash
+sudo apt install nodejs
+```
+Then run npm install --save-dev npm-run-all in your project folder
+
+
+To run the back-end and front-end together, run the following command:
 
 ```bash
 npm run start
