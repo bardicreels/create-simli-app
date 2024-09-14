@@ -56,7 +56,6 @@ const AvatarInteraction: React.FC<AvatarInteractionProps> = ({
       };
 
       simliClientRef.current = new SimliClient();
-      simliClientRef.current.Initialize(SimliConfig);
       console.log('Simli Client initialized');
     }
   }, []);
