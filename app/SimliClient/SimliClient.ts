@@ -7,16 +7,13 @@ export class SimliClient {
     private videoRef: React.RefObject<HTMLVideoElement> | null = null;
     private audioRef: React.RefObject<HTMLAudioElement> | null = null;
 
-    constructor(
-        private apiKey: string,
-        private faceID: string,
-        private handleSilence: boolean,
-        videoRef: React.RefObject<HTMLVideoElement>,
-        audioRef: React.RefObject<HTMLAudioElement>
-    ) {
+    constructor(config: SimliClientConfig) {
+        this.apiKey = config.apiKey;
+        this.faceID = config.faceID;
+        this.handleSilence = config.handleSilence;
         if (typeof window !== 'undefined') {
-            this.videoRef = videoRef;
-            this.audioRef = audioRef;
+            this.videoRef = config.videoRef;
+            this.audioRef = config.audioRef;
         } else {
             console.warn('Running in Node.js environment. Some features may not be available.');
         }

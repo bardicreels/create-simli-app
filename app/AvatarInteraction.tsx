@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { SimliClient } from 'simli-client';
+import { SimliClient, SimliClientConfig } from '@simli/simli-js';
 import VideoBox from './VideoBox';
 interface AvatarInteractionProps {
   simli_faceid: string;
@@ -58,7 +58,7 @@ const AvatarInteraction: React.FC<AvatarInteractionProps> = ({
       simliClientRef.current.Initialize(SimliConfig);
       console.log('Simli Client initialized');
     }
-  }, []);
+  }, [simli_faceid, videoRef, audioRef]);
 
   /* startConversation() queries our local backend to start an elevenLabs conversation over Websockets */
   const startConversation = useCallback(async () => {
