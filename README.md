@@ -3,7 +3,8 @@ This starter is an example of how to create a composable Simli interaction that 
 The project consists of a Next.js app that uses the Simli SDK (`simli-client`) and a server `server.js` that handles the interaction with other services such as speech-to-text (STT), large language models (LLMs) and text-to-speech (TTS). 
 
 ### Environment variables
-Start by signing up and getting your API key from [Simli.com](https://www.simli.com/). Then, fill in the `.env` file in the root of the project and put in the following environment variables:
+Start by signing up and getting your API key from [Simli.com](https://www.simli.com/). 
+Then Rename .env_sample to .env and paste your API keys.
 
 ```bash
 NEXT_PUBLIC_SIMLI_API_KEY="API key from simli.com"
