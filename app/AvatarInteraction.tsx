@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { SimliClient, SimliClientConfig } from '@simli/simli-js';
+import { SimliClient, SimliClientConfig } from './SimliClient/SimliClient';
 import VideoBox from './VideoBox';
 interface AvatarInteractionProps {
   simli_faceid: string;
@@ -54,8 +54,8 @@ const AvatarInteraction: React.FC<AvatarInteractionProps> = ({
         audioRef: audioRef,
       };
 
-      simliClientRef.current = new SimliClient();
-      simliClientRef.current.Initialize(SimliConfig);
+      simliClientRef.current = new SimliClient(SimliConfig);
+      simliClientRef.current.Initialize();
       console.log('Simli Client initialized');
     }
   }, [simli_faceid, videoRef, audioRef]);

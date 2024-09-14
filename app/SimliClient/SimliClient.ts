@@ -1,3 +1,11 @@
+export interface SimliClientConfig {
+    apiKey: string;
+    faceID: string;
+    handleSilence: boolean;
+    videoRef: React.RefObject<HTMLVideoElement>;
+    audioRef: React.RefObject<HTMLAudioElement>;
+}
+
 export class SimliClient {
     private pc: RTCPeerConnection | null = null;
     private dc: RTCDataChannel | null = null;
@@ -6,6 +14,9 @@ export class SimliClient {
     private prevCandidateCount: number = -1;
     private videoRef: React.RefObject<HTMLVideoElement> | null = null;
     private audioRef: React.RefObject<HTMLAudioElement> | null = null;
+    private apiKey: string;
+    private faceID: string;
+    private handleSilence: boolean;
 
     constructor(config: SimliClientConfig) {
         this.apiKey = config.apiKey;
