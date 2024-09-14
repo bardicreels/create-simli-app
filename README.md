@@ -20,8 +20,11 @@ First make sure you have nodejs installed
 ```bash
 sudo apt install nodejs
 ```
-Then run npm install --save-dev npm-run-all in your project folder
+Then run 
 
+```bash
+npm install --save-dev npm-run-all in your project folder
+```
 
 To run the back-end and front-end together, run the following command:
 
